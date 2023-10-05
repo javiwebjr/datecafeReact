@@ -29,7 +29,7 @@ export const useAuth = ({middleware, url}) => {
     }
     const registro = async (datos, setErrores) => {
         try {
-            const {data} = await axiosCliente.post('/api/register', datos);
+            const {data} = await axiosCliente.post('/api/registro', datos);
             localStorage.setItem('AUTH_TOKEN', data.token);
             setErrores([]);
             await mutate();
